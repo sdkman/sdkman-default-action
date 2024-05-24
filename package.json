@@ -1,0 +1,34 @@
+{
+  "name": "sdkman-default-action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "bundle": "npm run format:write && npm run package",
+    "format:write": "npx prettier --write .",
+    "package": "npx ncc build src/main.js -o dist --source-map --license licenses.md",
+    "package:watch": "npm run package -- --watch"
+  },
+  "keywords": [],
+  "author": "Hamza Remmal <hamza@remmal.net> (https://remmal.net)",
+  "license": "ISC",
+  "private": true,
+  "homepage": "https://github.com/hamzaremmal/sdkman-default-action",
+  "bugs": {
+    "url": "https://github.com/hamzaremmal/sdkman-default-action/issues/new"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0",
+    "axios": "^1.7.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.1"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
