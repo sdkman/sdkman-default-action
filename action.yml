@@ -1,0 +1,27 @@
+name: "SDKMAN! Default Action"
+author: "hamzaremmal"
+description: "Change the default version of your sdk in SDKMAN! using GitHub Actions"
+
+inputs:
+  CONSUMER-KEY:
+    description: "TODO"
+    required: true
+  CONSUMER-TOKEN:
+    description: "TODO"
+    required: true
+  CANDIDATE:
+    description: "TODO"
+    required: true
+  VERSION:
+    description: "TODO"
+    required: true
+  BACKEND:
+    description: "TODO"
+    required: false
+    default: "https://vendors.sdkman.io"
+
+## TODO: ADD THE OUTPUTS ?
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
