@@ -38189,7 +38189,7 @@ async function main() {
   };
 
   const query_config = {
-    method: "POST",
+    method: "PUT",
     url: `${backend}/default`,
     headers: {
       "Consumer-Key": consumer_key,
